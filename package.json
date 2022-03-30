@@ -1,0 +1,19 @@
+{
+	"name": "nasa-project",
+	"version": "1.0.0",
+	"description": "Nasa API Project",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/alisadek/nasa-project.git"
+	},
+	"author": "Ali Sadek",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/alisadek/nasa-project/issues"
+	},
+	"homepage": "https://github.com/alisadek/nasa-project#readme"
+}
