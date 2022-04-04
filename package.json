@@ -4,7 +4,13 @@
 	"description": "Nasa API Project",
 	"main": "server.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"install-server": "npm install --prefix server",
+		"install-client": "npm install --prefix client",
+		"install": "npm install-server && npm install-client",
+		"server": "npm run watch --prefix server",
+		"client": "npm start --prefix client",
+		"watch": "npm run server & npm run client",
+		"test": "npm run test --prefix server & npm run test --prefix client"
 	},
 	"repository": {
 		"type": "git",
@@ -15,5 +21,8 @@
 	"bugs": {
 		"url": "https://github.com/alisadek/nasa-project/issues"
 	},
-	"homepage": "https://github.com/alisadek/nasa-project#readme"
+	"homepage": "https://github.com/alisadek/nasa-project#readme",
+	"dependencies": {
+		"csv-parse": "^5.0.4"
+	}
 }
