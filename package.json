@@ -9,7 +9,8 @@
 		"install": "npm install-server && npm install-client",
 		"server": "npm run watch --prefix server",
 		"client": "npm start --prefix client",
-		"watch": "npm run server & npm run client",
+		"watch": "concurrently --kill-others \"npm run server\" \"npm run client\"",
+		"deploy": "npm run build --prefix client & npm start --prefix server",
 		"test": "npm run test --prefix server & npm run test --prefix client"
 	},
 	"repository": {
@@ -23,6 +24,8 @@
 	},
 	"homepage": "https://github.com/alisadek/nasa-project#readme",
 	"dependencies": {
-		"csv-parse": "^5.0.4"
+		"concurrently": "^7.1.0",
+		"csv-parse": "^5.0.4",
+		"morgan": "^1.10.0"
 	}
 }
