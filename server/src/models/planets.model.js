@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { parse } = require("csv-parse");
+const { httpGetAllPlanets } = require("../routes/planets/planets.controller");
 
 //create readable stream
 const habitablePlanets = [];
@@ -40,4 +41,7 @@ function loadPlanetsData() {
 	});
 	//read the incoming data
 }
-module.exports = { loadPlanetsData, planets: habitablePlanets };
+function getAllPlanets() {
+	return habitablePlanets;
+}
+module.exports = { loadPlanetsData, getAllPlanets };
